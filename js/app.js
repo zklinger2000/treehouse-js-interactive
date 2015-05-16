@@ -62,8 +62,10 @@ var editTask = function() {
 //Delete an existing task
 var deleteTask = function() {
   console.log("Delete task...");
-  //When the Delete button is pressed
-    //Remove the parent list item from the ul
+  //Remove the parent list item from the ul
+  var listItem = this.parentNode;
+  var ul = listItem.parentNode;
+  ul.removeChild(listItem);
 }
 
 //Mark a task as complete
